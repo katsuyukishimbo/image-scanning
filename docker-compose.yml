@@ -1,6 +1,7 @@
 version: '3'
 services:
   webserver:
+    container_name: webserver
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -11,3 +12,4 @@ services:
       - "8080:8080"
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: google_credentials.json
+    command: npm run dev
