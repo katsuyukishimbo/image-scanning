@@ -9,3 +9,5 @@ services:
       - ./:/image-scanning
     ports:
       - "8080:8080"
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: google_credentials.json
